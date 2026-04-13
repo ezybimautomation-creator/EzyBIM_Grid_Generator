@@ -10,6 +10,7 @@ import blueprintDesigner from "../assets/product-details/grid-generator/blueprin
 import bulkAutomation from "../assets/product-details/grid-generator/bulk-automation.png";
 import namingOrientation from "../assets/product-details/grid-generator/naming-orientation.png";
 import visualControls from "../assets/product-details/grid-generator/visual-controls.png";
+import geospatialPrecision from "../assets/product-details/grid-generator/geospatial-precision.png";
 import alignmentDocs from "../assets/product-details/grid-generator/alignment-docs.png";
 
 export interface FeatureDetail {
@@ -72,28 +73,33 @@ export const products: Product[] = [
     ],
     showcase: [
       {
-        title: "The EzyGrid Blueprint Designer",
-        description: "The heart of EzyGrid is its interactive, high-contrast canvas. Fluid navigation allows you to zoom and pan across your grid layout with ease, receiving real-time coordinate readouts and distance measurements.",
+        title: "1. The EzyGrid Blueprint Designer",
+        description: "The heart of EzyGrid is its interactive, high-contrast canvas. Unlike the standard Revit environment, this designer provides a clean, 'blueprint-style' interface where you can layout your entire grid system without the clutter of other model elements.",
         image: blueprintDesigner
       },
       {
-        title: "One-Click Bulk System Generation",
-        description: "For projects starting from a standard modular layout, the Bulk Generator is a massive time-saver. Simply specify the number of grids and desired spacing for both axes to generate a complete system in milliseconds.",
+        title: "2. One-Click Bulk System Generation",
+        description: "For projects starting from a standard modular layout, the Bulk Generator is a massive time-saver. By simply specifying the number of grids and the desired spacing for both the X and Y axes, you can generate a complete orthogonal system in milliseconds.",
         image: bulkAutomation
       },
       {
-        title: "Intelligent Naming & Dynamic Orientation",
-        description: "Automate grid names with sophisticated logic that understands spatial relationships. Auto-sequence numbers and letters based on position, or instantly swap naming styles between axes.",
+        title: "3. Intelligent Naming & Dynamic Orientation",
+        description: "Managing grid names manually is one of the most error-prone tasks in Revit. EzyGrid automates this with sophisticated naming logic that understands spatial relationships and auto-sequences based on position.",
         image: namingOrientation
       },
       {
-        title: "Visual Control & Specification",
-        description: "Fine-tune the appearance of your grids. Define free-length extensions and toggle bubble visibility at the start or end points globally to ensure every grid follows your graphical standard.",
+        title: "4. Visual Control & Specification",
+        description: "Fine-tune the appearance of your grids before they hit the Revit model. EzyGrid gives you granular control over grid geometry, free length extensions, and global bubble visibility symbols.",
         image: visualControls
       },
       {
-        title: "Automatic Documentation & Origin Alignment",
-        description: "Bridge the gap between layout and final documentation. Instantly align intersections to the Internal Origin or Project Base Point and generate linear dimension strings automatically.",
+        title: "5. Geospatial Precision & Real-Time Documentation",
+        description: "Maintain absolute coordination between your grid system and Revit's geospatial coordinates. Uniquely visualize critical project points like Internal Origin, PBP, and Survey Point directly on the canvas.",
+        image: geospatialPrecision
+      },
+      {
+        title: "6. Automatic Documentation & Origin Alignment",
+        description: "Bridge the gap between layout and final documentation. Instantly align intersections to the Internal Origin or Project Base Point and generate linear dimension strings automatically during grid creation.",
         image: alignmentDocs
       }
     ],
