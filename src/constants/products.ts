@@ -5,9 +5,23 @@ import clashResolverImg from "../assets/clash-resolver.png";
 import gridGenIcon from "../assets/grid-generator-icon.png";
 import rebarGenIcon from "../assets/rebar-generator-icon.png";
 
+// Showcase Images
+import fullUI from "../assets/product-details/grid-generator/full-ui.png";
+import interactiveCanvas from "../assets/product-details/grid-generator/interactive-canvas.png";
+import bulkGenerator from "../assets/product-details/grid-generator/bulk-generator.png";
+import precisionAlignment from "../assets/product-details/grid-generator/precision-alignment.png";
+import flexibleNaming from "../assets/product-details/grid-generator/flexible-naming.png";
+import smartSettings from "../assets/product-details/grid-generator/smart-settings.png";
+
 export interface FeatureDetail {
   title: string;
   description: string;
+}
+
+export interface ShowcaseItem {
+  title: string;
+  description: string;
+  image: string;
 }
 
 export interface Product {
@@ -22,6 +36,7 @@ export interface Product {
   isFree: boolean;
   features: string[];
   fullFeatures: FeatureDetail[];
+  showcase?: ShowcaseItem[];
 }
 
 export const products: Product[] = [
@@ -52,6 +67,38 @@ export const products: Product[] = [
       {
         title: "Granular Visibility Controls",
         description: "Toggle bubble start/end points independently for horizontal and vertical grids."
+      }
+    ],
+    showcase: [
+      {
+        title: "The Blueprint Experience",
+        description: "Experience the ultimate Revit precision with a high-performance, dark-mode canvas. Visualizing your grid architecture has never been this intuitive.",
+        image: fullUI
+      },
+      {
+        title: "Magnetic Snapping & Automated Dimensions",
+        description: "Stop guessing distances. EzyGrid's magnetic snapping system locks onto Revit’s Internal Origin and Project Base Points while providing real-time, CAD-accurate dimensioning as you draw.",
+        image: interactiveCanvas
+      },
+      {
+        title: "Rapid Mass-Automation System",
+        description: "Why place 50 grids manually when you can do it in two seconds? Our Bulk Generator allows you to specify complex orthogonal systems with precise spacing and labels instantly.",
+        image: bulkGenerator
+      },
+      {
+        title: "Align A-1 to Project Base Point",
+        description: "Alignment is no longer a chore. With one click, surgically align your grid intersection A-1 to the Project Base Point or Internal Origin—ensuring total coordinate model health.",
+        image: precisionAlignment
+      },
+      {
+        title: "Universal Naming Logic & Order Control",
+        description: "Switch between Numeric (123) and Alphabetic (ABC) labeling instantly. Need to reverse the flow? Our intelligent flip system handles every single naming possibility automatically.",
+        image: flexibleNaming
+      },
+      {
+        title: "Smart Visibility & Extension Controls",
+        description: "Control your model's aesthetic with granular bubble visibility toggles. Set free-length extensions and toggle bubble starts/ends for vertical and horizontal axes independently.",
+        image: smartSettings
       }
     ]
   },

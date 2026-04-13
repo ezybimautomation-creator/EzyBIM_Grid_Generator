@@ -121,43 +121,56 @@ export default function ProductDetailPage() {
         </div>
       </section>
 
-      {/* Media Mockup Slot */}
-      <section className="py-32 px-8 relative overflow-hidden">
-        <div className="absolute inset-0 bim-grid opacity-5"></div>
-        <div className="max-w-7xl mx-auto relative z-10">
-          <div className="text-center mb-20">
-             <h2 className="text-3xl md:text-5xl font-headline font-black text-slate-foundation tracking-tighter mb-4">
-              Interface <span className="text-primary">& Workflow</span>
-            </h2>
-            <p className="text-on-surface-variant max-w-2xl mx-auto text-lg font-light">
-              See the precision of the EzyBIM environment in action. Designed to feel like a natural extension of the Revit ribbon.
-            </p>
-          </div>
-          
-          {/* Main Screenshot Placeholder */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <div className="lg:col-span-2 aspect-[4/3] bg-slate-50 border border-slate-100 rounded-[2.5rem] flex flex-col items-center justify-center p-12 text-center group overflow-hidden relative">
-               <Layout className="w-16 h-16 text-slate-200 mb-6 group-hover:scale-110 transition-transform duration-700" />
-               <h4 className="text-lg font-bold text-slate-400 mb-2">Main Dashboard View</h4>
-               <p className="text-sm text-slate-300 max-w-xs">High-resolution screenshot reflecting the tool in a production environment.</p>
-               <div className="absolute bottom-6 right-6 px-4 py-2 bg-slate-foundation rounded-full text-[10px] font-black uppercase tracking-widest text-white/50">Placeholder</div>
+      {/* Feature Showcase */}
+      {product.showcase && product.showcase.length > 0 && (
+        <section className="py-24 px-8 relative overflow-hidden">
+          <div className="absolute inset-0 bim-grid opacity-5"></div>
+          <div className="max-w-7xl mx-auto relative z-10 space-y-32">
+            <div className="text-center mb-20">
+               <h2 className="text-3xl md:text-5xl font-headline font-black text-slate-foundation tracking-tighter mb-4">
+                Detailed <span className="text-primary">& Workflow</span>
+              </h2>
+              <p className="text-on-surface-variant max-w-2xl mx-auto text-lg font-light">
+                Experience the precision tools that define EzyBIM's standard for Revit automation.
+              </p>
             </div>
-            
-            <div className="flex flex-col gap-8">
-              <div className="flex-grow bg-slate-50 border border-slate-100 rounded-[2.5rem] flex flex-col items-center justify-center p-8 text-center group relative overflow-hidden">
-                 <div className="w-12 h-12 rounded-full border-2 border-slate-100 text-slate-200 flex items-center justify-center font-black mb-4 group-hover:border-primary/20 group-hover:text-primary/20 transition-colors">01</div>
-                 <h5 className="text-md font-bold text-slate-400 mb-1">Detail 01</h5>
-                 <p className="text-xs text-slate-300">Specific feature close-up</p>
-              </div>
-              <div className="flex-grow bg-slate-50 border border-slate-100 rounded-[2.5rem] flex flex-col items-center justify-center p-8 text-center group relative overflow-hidden">
-                 <div className="w-12 h-12 rounded-full border-2 border-slate-100 text-slate-200 flex items-center justify-center font-black mb-4 group-hover:border-primary/20 group-hover:text-primary/20 transition-colors">02</div>
-                 <h5 className="text-md font-bold text-slate-400 mb-1">Detail 02</h5>
-                 <p className="text-xs text-slate-300">Workflow step visualization</p>
-              </div>
-            </div>
+
+            {product.showcase.map((item, idx) => (
+              <motion.div 
+                key={idx}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className={`flex flex-col ${idx % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-16 items-center`}
+              >
+                <div className="flex-1 space-y-6">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 bg-primary/5 rounded-full border border-primary/10">
+                    <span className="text-[10px] font-black uppercase tracking-[0.2em] text-primary">Feature 0{idx + 1}</span>
+                  </div>
+                  <h3 className="text-3xl md:text-4xl font-headline font-black text-slate-foundation tracking-tight">
+                    {item.title}
+                  </h3>
+                  <p className="text-lg text-on-surface-variant font-light leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+                
+                <div className="flex-1 w-full relative">
+                  <div className="absolute -inset-4 bg-primary/5 blur-3xl rounded-full opacity-50"></div>
+                  <div className="relative rounded-[2rem] overflow-hidden border border-slate-200 shadow-2xl transition-transform duration-700 hover:scale-[1.02]">
+                    <img 
+                      src={item.image} 
+                      alt={item.title}
+                      className="w-full h-auto object-cover"
+                    />
+                  </div>
+                </div>
+              </motion.div>
+            ))}
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* Final Conversion */}
       <section className="px-8 mb-20">
