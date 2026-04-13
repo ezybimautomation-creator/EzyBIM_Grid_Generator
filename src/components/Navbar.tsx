@@ -21,7 +21,7 @@ export default function Navbar() {
     >
       <Link to="/" className="flex items-center group">
         <img 
-          src="/logo-full.png" 
+          src={`${import.meta.env.BASE_URL}logo-full.png`} 
           alt="EzyBIM Logo" 
           className="h-14 w-auto object-contain group-hover:opacity-80 transition-opacity"
         />

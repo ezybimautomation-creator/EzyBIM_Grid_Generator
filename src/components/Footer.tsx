@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="md:col-span-1 space-y-8">
           <Link to="/" className="inline-block">
             <img 
-              src="/logo-full.png" 
+              src={`${import.meta.env.BASE_URL}logo-full.png`} 
               alt="EzyBIM Logo" 
               className="h-10 w-auto object-contain brightness-0 invert"
             />
