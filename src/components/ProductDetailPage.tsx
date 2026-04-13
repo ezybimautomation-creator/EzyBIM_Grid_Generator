@@ -89,7 +89,7 @@ export default function ProductDetailPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="mt-16 relative"
+            className="mt-16 relative max-w-5xl mx-auto"
           >
             <div className="absolute -inset-6 bg-primary/5 blur-3xl rounded-full opacity-40"></div>
             {product.heroImage ? (
