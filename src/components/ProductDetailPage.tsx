@@ -60,14 +60,15 @@ export default function ProductDetailPage() {
               </p>
 
               <div className="flex flex-wrap gap-4">
-                {product.isFree ? (
-                  <motion.button 
+                  <motion.a 
+                    href={product.downloadUrl || "#"}
+                    download
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="cta-gradient text-white px-10 py-5 rounded-2xl font-headline font-black text-sm uppercase tracking-widest flex items-center gap-3 shadow-2xl shadow-primary/20"
                   >
                     Download Now <Download className="w-4 h-4" />
-                  </motion.button>
+                  </motion.a>
                 ) : (
                   <motion.a 
                     href={`${import.meta.env.BASE_URL}#contact`}

@@ -35,6 +35,7 @@ export interface Product {
   heroImage?: string;
   price: string;
   isFree: boolean;
+  downloadUrl?: string;
   features: string[];
   fullFeatures: FeatureDetail[];
   showcase?: ShowcaseItem[];
@@ -54,6 +55,7 @@ export const products: Product[] = [
     image: gridGenIcon,
     price: "FREE",
     isFree: true,
+    downloadUrl: "#", // Replace with your GitHub Release link
     features: ["Interactive Canvas", "Bulk Generation", "Origin Alignment", "Smart Dimensions"],
     fullFeatures: [
       {
