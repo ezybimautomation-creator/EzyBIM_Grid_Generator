@@ -32,6 +32,7 @@ export interface Product {
   longDescription: string;
   icon: any;
   image: string;
+  heroImage?: string;
   price: string;
   isFree: boolean;
   features: string[];
@@ -45,10 +46,11 @@ export const products: Product[] = [
   {
     id: "grid-generator",
     name: "EzyGrid",
-    tagline: "Welcome to the official feature guide for EzyGrid, the most intuitive and powerful grid management tool for Autodesk Revit.",
+    tagline: "EzyBIM Grid Generator",
     description: "Rapidly generate complex Revit grid systems with an interactive blueprint canvas and origin targeting.",
-    longDescription: "The heart of EzyGrid is its interactive, high-contrast canvas. Unlike the standard Revit environment, this designer provides a clean, 'blueprint-style' interface where you can layout your entire grid system without the clutter of other model elements.",
+    longDescription: "The heart of EzyGrid is its interactive, high-contrast canvas. Unlike the standard Revit environment, this designer provides a clean, 'blueprint-style' interface where you can layout your entire grid system without the clutter of other model elements. Design your grids in a sandbox environment and commit them to Revit only when you are satisfied.",
     icon: LayoutGrid,
+    heroImage: blueprintDesigner,
     image: gridGenIcon,
     price: "FREE",
     isFree: true,
@@ -73,32 +75,27 @@ export const products: Product[] = [
     ],
     showcase: [
       {
-        title: "1. The EzyGrid Blueprint Designer",
-        description: "The heart of EzyGrid is its interactive, high-contrast canvas. Unlike the standard Revit environment, this designer provides a clean, 'blueprint-style' interface where you can layout your entire grid system without the clutter of other model elements.",
-        image: blueprintDesigner
-      },
-      {
-        title: "2. One-Click Bulk System Generation",
+        title: "One-Click Bulk System Generation",
         description: "For projects starting from a standard modular layout, the Bulk Generator is a massive time-saver. By simply specifying the number of grids and the desired spacing for both the X and Y axes, you can generate a complete orthogonal system in milliseconds.",
         image: bulkAutomation
       },
       {
-        title: "3. Intelligent Naming & Dynamic Orientation",
+        title: "Intelligent Naming & Dynamic Orientation",
         description: "Managing grid names manually is one of the most error-prone tasks in Revit. EzyGrid automates this with sophisticated naming logic that understands spatial relationships and auto-sequences based on position.",
         image: namingOrientation
       },
       {
-        title: "4. Visual Control & Specification",
+        title: "Visual Control & Specification",
         description: "Fine-tune the appearance of your grids before they hit the Revit model. EzyGrid gives you granular control over grid geometry, free length extensions, and global bubble visibility symbols.",
         image: visualControls
       },
       {
-        title: "5. Geospatial Precision & Real-Time Documentation",
+        title: "Geospatial Precision & Real-Time Documentation",
         description: "Maintain absolute coordination between your grid system and Revit's geospatial coordinates. Uniquely visualize critical project points like Internal Origin, PBP, and Survey Point directly on the canvas.",
         image: geospatialPrecision
       },
       {
-        title: "6. Automatic Documentation & Origin Alignment",
+        title: "Automatic Documentation & Origin Alignment",
         description: "Bridge the gap between layout and final documentation. Instantly align intersections to the Internal Origin or Project Base Point and generate linear dimension strings automatically during grid creation.",
         image: alignmentDocs
       }

@@ -83,22 +83,32 @@ export default function ProductDetailPage() {
               </div>
             </motion.div>
 
-            {/* Video Placeholder Slot */}
+            {/* Hero Image or Video Placeholder */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative aspect-video rounded-[3rem] bg-slate-900 overflow-hidden shadow-2xl group border-[12px] border-white ring-1 ring-slate-100"
+              className="relative rounded-[2rem] overflow-hidden shadow-2xl border-[6px] border-white ring-1 ring-slate-100"
             >
-              <div className="absolute inset-0 flex items-center justify-center bg-slate-foundation/40 backdrop-blur-sm group-hover:backdrop-blur-0 transition-all duration-700">
-                <div className="w-20 h-20 rounded-full bg-primary flex items-center justify-center text-white shadow-2xl shadow-primary/40 group-hover:scale-110 transition-transform">
-                  <Play className="w-8 h-8 fill-current ml-1" />
+              {product.heroImage ? (
+                <img
+                  src={product.heroImage}
+                  alt={`${product.name} Interface`}
+                  className="w-full h-auto object-cover"
+                />
+              ) : (
+                <div className="aspect-video bg-slate-900 flex items-center justify-center group">
+                  <div className="absolute inset-0 flex items-center justify-center bg-slate-foundation/40 backdrop-blur-sm group-hover:backdrop-blur-0 transition-all duration-700">
+                    <div className="w-20 h-20 rounded-full bg-primary flex items-center justify-center text-white shadow-2xl shadow-primary/40 group-hover:scale-110 transition-transform">
+                      <Play className="w-8 h-8 fill-current ml-1" />
+                    </div>
+                  </div>
+                  <div className="absolute bottom-6 left-6 right-6 p-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <span className="text-white text-xs font-black uppercase tracking-widest block mb-1">Coming Soon</span>
+                    <p className="text-white/70 text-sm">Official video demonstration and feature walkthrough.</p>
+                  </div>
                 </div>
-              </div>
-              <div className="absolute bottom-6 left-6 right-6 p-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                <span className="text-white text-xs font-black uppercase tracking-widest block mb-1">Coming Soon</span>
-                <p className="text-white/70 text-sm">Official video demonstration and feature walkthrough.</p>
-              </div>
+              )}
             </motion.div>
           </div>
         </div>
