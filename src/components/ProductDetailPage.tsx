@@ -169,14 +169,14 @@ export default function ProductDetailPage() {
                   </p>
                 </div>
                 
-                <div className="flex-1 w-full flex justify-center items-center relative">
+                <div className="flex-1 w-full flex justify-center items-center relative p-8">
                   <div className="absolute -inset-4 bg-primary/5 blur-3xl rounded-full opacity-50"></div>
-                  <div className="relative rounded-[2rem] overflow-hidden border border-slate-200 shadow-2xl transition-transform duration-700 hover:scale-[1.02] bg-white group">
-                    <div className="absolute inset-0 bg-slate-50/50 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                  <div className="relative rounded-[2rem] overflow-hidden border border-slate-200 shadow-xl transition-transform duration-700 hover:scale-[1.02] bg-white group max-w-[480px]">
+                    <div className="absolute inset-0 bg-slate-50/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                     <img 
                       src={item.image} 
                       alt={item.title}
-                      className="max-w-full h-auto object-contain mx-auto"
+                      className="w-full h-auto object-contain mx-auto"
                     />
                   </div>
                 </div>
