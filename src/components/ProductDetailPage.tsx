@@ -172,6 +172,56 @@ export default function ProductDetailPage() {
         </section>
       )}
 
+      {/* Technical Specifications & Expert Tip */}
+      {(product.specs || product.tip) && (
+        <section className="py-24 px-8 bg-surface border-t border-slate-100 relative overflow-hidden">
+          <div className="max-w-7xl mx-auto relative z-10">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+              {/* Specs */}
+              {product.specs && (
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  className="bg-white p-12 rounded-[3.5rem] shadow-xl border border-slate-100"
+                >
+                  <h3 className="text-2xl font-headline font-black text-slate-foundation mb-8 flex items-center gap-3">
+                    <Layout className="w-6 h-6 text-primary" /> Technical Specifications
+                  </h3>
+                  <ul className="space-y-6">
+                    {product.specs.map((spec, idx) => (
+                      <li key={idx} className="flex gap-4 items-start">
+                        <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
+                        <span className="text-on-surface-variant font-light leading-relaxed">{spec}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+              )}
+
+              {/* Tip */}
+              {product.tip && (
+                <motion.div
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  className="cta-gradient p-12 rounded-[3.5rem] shadow-2xl relative overflow-hidden group"
+                >
+                   <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:scale-110 transition-transform duration-700">
+                    <Activity className="w-32 h-32 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-headline font-black text-white mb-6 relative z-10">Expert TIP</h3>
+                  <div className="w-12 h-1 bg-white/30 mb-8 relative z-10" />
+                  <p className="text-white/90 text-xl font-light leading-relaxed relative z-10 italic">
+                    "{product.tip}"
+                  </p>
+                </motion.div>
+              )}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Final Conversion */}
       <section className="px-8 mb-20">
         <div className="max-w-7xl mx-auto bg-slate-foundation rounded-[3.5rem] p-16 md:p-32 relative overflow-hidden shadow-2xl">

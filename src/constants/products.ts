@@ -5,13 +5,12 @@ import clashResolverImg from "../assets/clash-resolver.png";
 import gridGenIcon from "../assets/grid-generator-icon.png";
 import rebarGenIcon from "../assets/rebar-generator-icon.png";
 
-// Showcase Images
-import fullUI from "../assets/product-details/grid-generator/full-ui.png";
-import interactiveCanvas from "../assets/product-details/grid-generator/interactive-canvas.png";
-import bulkGenerator from "../assets/product-details/grid-generator/bulk-generator.png";
-import precisionAlignment from "../assets/product-details/grid-generator/precision-alignment.png";
-import flexibleNaming from "../assets/product-details/grid-generator/flexible-naming.png";
-import smartSettings from "../assets/product-details/grid-generator/smart-settings.png";
+// Guide Showcase Images
+import blueprintDesigner from "../assets/product-details/grid-generator/blueprint-designer.png";
+import bulkAutomation from "../assets/product-details/grid-generator/bulk-automation.png";
+import namingOrientation from "../assets/product-details/grid-generator/naming-orientation.png";
+import visualControls from "../assets/product-details/grid-generator/visual-controls.png";
+import alignmentDocs from "../assets/product-details/grid-generator/alignment-docs.png";
 
 export interface FeatureDetail {
   title: string;
@@ -37,15 +36,17 @@ export interface Product {
   features: string[];
   fullFeatures: FeatureDetail[];
   showcase?: ShowcaseItem[];
+  specs?: string[];
+  tip?: string;
 }
 
 export const products: Product[] = [
   {
     id: "grid-generator",
     name: "EzyGrid",
-    tagline: "EzyBIM Grid Generator",
+    tagline: "Welcome to the official feature guide for EzyGrid, the most intuitive and powerful grid management tool for Autodesk Revit.",
     description: "Rapidly generate complex Revit grid systems with an interactive blueprint canvas and origin targeting.",
-    longDescription: "Engineered for speed and surgical precision, the Grid Generator eliminates the tedious manual placement of Revit grids. With an interactive blueprint-style canvas, users can visualize their entire grid system before committing to the model. Whether you are creating a simple residential layout or a massive enterprise-scale industrial project, the EzyBIM Grid Generator ensures your foundation is perfect from the start.",
+    longDescription: "The heart of EzyGrid is its interactive, high-contrast canvas. Unlike the standard Revit environment, this designer provides a clean, 'blueprint-style' interface where you can layout your entire grid system without the clutter of other model elements.",
     icon: LayoutGrid,
     image: gridGenIcon,
     price: "FREE",
@@ -71,36 +72,37 @@ export const products: Product[] = [
     ],
     showcase: [
       {
-        title: "The Blueprint Experience",
-        description: "Experience the ultimate Revit precision with a high-performance, dark-mode canvas. Visualizing your grid architecture has never been this intuitive.",
-        image: fullUI
+        title: "The EzyGrid Blueprint Designer",
+        description: "The heart of EzyGrid is its interactive, high-contrast canvas. Fluid navigation allows you to zoom and pan across your grid layout with ease, receiving real-time coordinate readouts and distance measurements.",
+        image: blueprintDesigner
       },
       {
-        title: "Magnetic Snapping & Automated Dimensions",
-        description: "Stop guessing distances. EzyGrid's magnetic snapping system locks onto Revit’s Internal Origin and Project Base Points while providing real-time, CAD-accurate dimensioning as you draw.",
-        image: interactiveCanvas
+        title: "One-Click Bulk System Generation",
+        description: "For projects starting from a standard modular layout, the Bulk Generator is a massive time-saver. Simply specify the number of grids and desired spacing for both axes to generate a complete system in milliseconds.",
+        image: bulkAutomation
       },
       {
-        title: "Rapid Mass-Automation System",
-        description: "Why place 50 grids manually when you can do it in two seconds? Our Bulk Generator allows you to specify complex orthogonal systems with precise spacing and labels instantly.",
-        image: bulkGenerator
+        title: "Intelligent Naming & Dynamic Orientation",
+        description: "Automate grid names with sophisticated logic that understands spatial relationships. Auto-sequence numbers and letters based on position, or instantly swap naming styles between axes.",
+        image: namingOrientation
       },
       {
-        title: "Align A-1 to Project Base Point",
-        description: "Alignment is no longer a chore. With one click, surgically align your grid intersection A-1 to the Project Base Point or Internal Origin—ensuring total coordinate model health.",
-        image: precisionAlignment
+        title: "Visual Control & Specification",
+        description: "Fine-tune the appearance of your grids. Define free-length extensions and toggle bubble visibility at the start or end points globally to ensure every grid follows your graphical standard.",
+        image: visualControls
       },
       {
-        title: "Universal Naming Logic & Order Control",
-        description: "Switch between Numeric (123) and Alphabetic (ABC) labeling instantly. Need to reverse the flow? Our intelligent flip system handles every single naming possibility automatically.",
-        image: flexibleNaming
-      },
-      {
-        title: "Smart Visibility & Extension Controls",
-        description: "Control your model's aesthetic with granular bubble visibility toggles. Set free-length extensions and toggle bubble starts/ends for vertical and horizontal axes independently.",
-        image: smartSettings
+        title: "Automatic Documentation & Origin Alignment",
+        description: "Bridge the gap between layout and final documentation. Instantly align intersections to the Internal Origin or Project Base Point and generate linear dimension strings automatically.",
+        image: alignmentDocs
       }
-    ]
+    ],
+    specs: [
+      "Revit Compatibility: Supports Revit 2019 through 2026.",
+      "Frameworks: Built on .NET 4.8 and .NET 8.0 for maximum performance.",
+      "User Interface: Powered by high-performance WPF rendering for a smooth, lag-free experience."
+    ],
+    tip: "Use the Magnetic Snap feature (X/Y axis snapping) on the canvas to ensure your manually placed grids are perfectly aligned with existing reference points."
   },
   {
     id: "rebar-generator",
