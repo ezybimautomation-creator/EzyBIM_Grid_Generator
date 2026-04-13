@@ -95,8 +95,8 @@ export const products: Product[] = [
         image: geospatialPrecision
       },
       {
-        title: "Automatic Documentation & Origin Alignment",
-        description: "Bridge the gap between layout and final documentation. Instantly align intersections to the Internal Origin or Project Base Point and generate linear dimension strings automatically during grid creation.",
+        title: "Automatic Dimensions & Origin Alignment",
+        description: "Bridge the gap between layout and final documentation. The tool automatically aligns the A-1 grid intersection point to the selected reference point (Project Base Point or Internal Origin) and generates linear dimension strings during creation.",
         image: alignmentDocs
       }
     ],
