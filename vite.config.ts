@@ -4,6 +4,7 @@ import path from 'path';
 import {defineConfig} from 'vite';
 
 export default defineConfig({
+  base: '/EzyBIM_Grid_Generator/',
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
