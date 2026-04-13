@@ -91,7 +91,7 @@ export const products: Product[] = [
       },
       {
         title: "Geospatial Precision & Real-Time Documentation",
-        description: "Maintain absolute coordination between your grid system and Revit's geospatial coordinates. Uniquely visualize critical project points like Internal Origin, PBP, and Survey Point directly on the canvas.",
+        description: "Maintain absolute coordination between your grid system and Revit's geospatial coordinates. Visualize critical points like Internal Origin, PBP, and Survey Point live on the canvas. Features AutoCAD-like dynamic input: hover over a position, type the dimension, and hit Enter to instantly create a grid. The canvas also intelligently auto-centers and zooms to ensure every grid remains perfectly visible at all times.",
         image: geospatialPrecision
       },
       {
