@@ -1,7 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { motion } from "motion/react";
 import { products } from "../constants/products";
-import { ChevronRight, CheckCircle2, Download, ArrowLeft, Play, Layout } from "lucide-react";
+import { ChevronRight, CheckCircle2, Download, ArrowLeft, Play, Layout, Activity } from "lucide-react";
 
 export default function ProductDetailPage() {
   const { id } = useParams();
