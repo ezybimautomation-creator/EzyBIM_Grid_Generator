@@ -69,13 +69,14 @@ export default function ProductDetailPage() {
                     Download Now <Download className="w-4 h-4" />
                   </motion.button>
                 ) : (
-                  <motion.button 
+                  <motion.a 
+                    href={`${import.meta.env.BASE_URL}#contact`}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="cta-gradient text-white px-10 py-5 rounded-2xl font-headline font-black text-sm uppercase tracking-widest flex items-center gap-3 shadow-2xl shadow-primary/20"
                   >
                     Request a Demo <Play className="w-4 h-4" />
-                  </motion.button>
+                  </motion.a>
                 )}
                 <button className="bg-white text-slate-foundation border border-slate-200 px-10 py-5 rounded-2xl font-headline font-black text-sm uppercase tracking-widest hover:bg-slate-50 transition-colors">
                   Documentation

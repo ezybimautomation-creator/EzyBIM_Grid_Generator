@@ -31,13 +31,14 @@ export default function Navbar() {
         <Link className="font-headline tracking-tighter font-bold text-xs uppercase text-slate-foundation hover:text-primary transition-colors duration-200" to="/products">Products</Link>
         <a className="font-headline tracking-tighter font-bold text-xs uppercase text-slate-foundation hover:text-primary transition-colors duration-200" href="#about">About</a>
       </div>
-      <motion.button 
+      <motion.a 
+        href={`${import.meta.env.BASE_URL}#contact`}
         whileHover={{ scale: 1.05, y: -1 }}
         whileTap={{ scale: 0.95 }}
         className="bg-slate-foundation text-white px-8 py-3 rounded-full font-headline font-bold text-xs uppercase tracking-widest shadow-lg shadow-slate-900/10"
       >
         Contact Us
-      </motion.button>
+      </motion.a>
     </motion.nav>
   );
 }

@@ -33,9 +33,9 @@ export default function Footer() {
           <h5 className="font-headline text-[10px] uppercase tracking-[0.2em] text-primary font-black mb-8">Navigation</h5>
           <ul className="space-y-4">
             <li><Link className="text-slate-400 hover:text-white transition-colors text-sm font-medium" to="/products">Revit Plugins</Link></li>
-            <li><a className="text-slate-400 hover:text-white transition-colors text-sm font-medium" href="#">Custom Development</a></li>
-            <li><a className="text-slate-400 hover:text-white transition-colors text-sm font-medium" href="#">BIM Consulting</a></li>
-            <li><a className="text-slate-400 hover:text-white transition-colors text-sm font-medium" href="#">Case Studies</a></li>
+            <li><a className="text-slate-400 hover:text-white transition-colors text-sm font-medium" href={`${import.meta.env.BASE_URL}#contact`}>Contact Support</a></li>
+            <li><a className="text-slate-400 hover:text-white transition-colors text-sm font-medium" href={`${import.meta.env.BASE_URL}#contact`}>Custom Development</a></li>
+            <li><a className="text-slate-400 hover:text-white transition-colors text-sm font-medium" href={`${import.meta.env.BASE_URL}#contact`}>Free Consultation</a></li>
           </ul>
         </div>
 

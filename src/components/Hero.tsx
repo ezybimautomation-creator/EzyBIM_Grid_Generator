@@ -34,13 +34,14 @@ export default function Hero() {
             Scalable BIM solutions engineered to eliminate technical debt and bring surgical accuracy to architectural modeling teams.
           </p>
           <div className="flex flex-wrap gap-4 pt-4">
-            <motion.button 
+            <motion.a 
+              href={`${import.meta.env.BASE_URL}#contact`}
               whileHover={{ scale: 1.02, y: -2 }}
               whileTap={{ scale: 0.98 }}
               className="cta-gradient text-white px-10 py-5 rounded-default font-headline font-bold text-lg shadow-2xl shadow-primary/30"
             >
               Request Custom Solution
-            </motion.button>
+            </motion.a>
             <button className="bg-white text-slate-foundation px-10 py-5 rounded-default font-headline font-bold text-lg border border-slate-foundation/10 hover:bg-slate-50 transition-colors">
               Our Products
             </button>

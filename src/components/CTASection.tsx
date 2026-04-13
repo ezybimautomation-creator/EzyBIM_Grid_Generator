@@ -32,14 +32,15 @@ export default function CTASection() {
             </p>
           </div>
           <div className="flex-shrink-0">
-            <motion.button 
+            <motion.a 
+              href={`${import.meta.env.BASE_URL}#contact`}
               whileHover={{ scale: 1.05, y: -5 }}
               whileTap={{ scale: 0.95 }}
               className="cta-gradient text-white px-12 py-6 rounded-full font-headline font-extrabold text-xl shadow-2xl shadow-primary/20 flex items-center gap-3 group"
             >
               Free Consultation 
               <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
-            </motion.button>
+            </motion.a>
           </div>
         </div>
         
