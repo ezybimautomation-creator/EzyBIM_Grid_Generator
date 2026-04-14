@@ -29,9 +29,12 @@ export default function ProductPage() {
               <p className="text-xl text-slate-400 mb-10 font-light leading-relaxed">
                 We specialize in developing bespoke Revit plugins and automated data pipelines tailored to your specific project requirements and firm standards.
               </p>
-              <button className="bg-white text-slate-foundation px-10 py-5 rounded-full font-headline font-black text-xs uppercase tracking-widest flex items-center gap-3 hover:scale-105 transition-transform duration-300">
+              <a 
+                href={`${import.meta.env.BASE_URL}#contact`}
+                className="bg-white text-slate-foundation px-10 py-5 rounded-full font-headline font-black text-xs uppercase tracking-widest flex items-center gap-3 hover:scale-105 transition-transform duration-300"
+              >
                 Request Development <ArrowRight className="w-4 h-4" />
-              </button>
+              </a>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
