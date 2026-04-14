@@ -41,6 +41,7 @@ export interface Product {
   showcase?: ShowcaseItem[];
   specs?: string[];
   tip?: string;
+  videoUrl?: string;
 }
 
 export const products: Product[] = [
@@ -56,6 +57,7 @@ export const products: Product[] = [
     price: "FREE",
     isFree: true,
     downloadUrl: "#", // Replace with your GitHub Release link
+    videoUrl: "Dz3v-cmQhx8",
     features: ["Interactive Canvas", "Bulk Generation", "Origin Alignment", "Smart Dimensions"],
     fullFeatures: [
       {

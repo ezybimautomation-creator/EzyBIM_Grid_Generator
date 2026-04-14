@@ -239,6 +239,41 @@ export default function ProductDetailPage() {
         </section>
       )}
 
+      {/* Visual Walkthrough */}
+      {product.videoUrl && (
+        <section className="py-24 px-8 relative overflow-hidden bg-white">
+          <div className="max-w-7xl mx-auto relative z-10">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-5xl font-headline font-black text-slate-foundation tracking-tighter mb-4 italic">
+                Experience the <span className="text-primary not-italic">Workflow</span>
+              </h2>
+              <p className="text-on-surface-variant max-w-2xl mx-auto text-lg font-light leading-relaxed">
+                Watch a detailed demonstration of how {product.name} revolutionizes your Revit modeling efficiency.
+              </p>
+            </div>
+            
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="max-w-5xl mx-auto relative group"
+            >
+              <div className="absolute -inset-4 bg-primary/5 blur-3xl rounded-full opacity-40 group-hover:opacity-60 transition-opacity"></div>
+              <div className="relative aspect-video rounded-[2.5rem] overflow-hidden shadow-2xl border-[6px] border-white ring-1 ring-slate-100 bg-slate-900 group">
+                <iframe
+                  className="w-full h-full border-0"
+                  src={`https://www.youtube.com/embed/${product.videoUrl}?rel=0&modestbranding=1`}
+                  title={`${product.name} Walkthrough`}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      )}
+
       {/* Final Conversion */}
       <section className="px-8 mb-20">
         <div className="max-w-7xl mx-auto bg-slate-foundation rounded-[3.5rem] p-16 md:p-32 relative overflow-hidden shadow-2xl">
