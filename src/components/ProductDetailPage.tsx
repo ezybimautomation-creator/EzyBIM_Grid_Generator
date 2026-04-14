@@ -121,7 +121,7 @@ export default function ProductDetailPage() {
       </section>
 
       {/* Feature Deep Dive */}
-      <section className="py-24 md:py-32 px-6 md:px-8 bg-white border-y border-slate-100">
+      <section className="py-24 md:py-32 px-6 md:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
             {product.fullFeatures.map((feature, idx) => (
@@ -191,7 +191,7 @@ export default function ProductDetailPage() {
 
       {/* Technical Specifications & Expert Tip */}
       {(product.specs || product.tip) && (
-        <section className="py-24 px-6 md:px-8 bg-surface border-t border-slate-100 relative overflow-hidden">
+        <section className="py-24 px-6 md:px-8 bg-surface relative overflow-hidden">
           <div className="max-w-7xl mx-auto relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
               {/* Specs */}

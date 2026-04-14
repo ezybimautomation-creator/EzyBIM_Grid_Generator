@@ -25,7 +25,7 @@ export default function Navbar() {
     <>
       <motion.nav 
         style={{ backgroundColor, backdropFilter: backdropBlur }}
-        className="sticky top-0 w-full z-50 flex justify-between items-center px-6 md:px-12 py-5 max-w-full mx-auto border-b border-slate- foundation/5 transition-colors duration-300"
+        className="sticky top-0 w-full z-50 flex justify-between items-center px-6 md:px-12 py-5 max-w-full mx-auto transition-colors duration-300"
       >
         <Link to="/" className="flex items-center group relative z-[60]">
           <img 
