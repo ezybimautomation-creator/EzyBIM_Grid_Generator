@@ -60,6 +60,7 @@ export default function ProductDetailPage() {
               </p>
 
               <div className="flex flex-wrap gap-4">
+                {product.isFree ? (
                   <motion.a 
                     href={product.downloadUrl || "#"}
                     download
