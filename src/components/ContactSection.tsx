@@ -1,8 +1,6 @@
 import { motion, AnimatePresence } from "motion/react";
 import { Mail, MessageCircle, Linkedin, Send, CheckCircle2 } from "lucide-react";
 import { useForm, ValidationError } from '@formspree/react';
-import whatsappQR from "../assets/contact/whatsapp-qr.png";
-import linkedinQR from "../assets/contact/linkedin-qr.png";
 
 export default function ContactSection() {
   const [state, handleSubmit] = useForm('mqewkqvg');
@@ -37,34 +35,24 @@ export default function ContactSection() {
               </div>
               
               {/* WhatsApp */}
-              <div className="flex items-center justify-between group max-w-md">
-                <div className="flex items-center gap-6">
-                  <div className="w-14 h-14 rounded-2xl bg-white flex items-center justify-center shadow-lg group-hover:bg-primary transition-colors duration-500">
-                    <MessageCircle className="w-6 h-6 text-primary group-hover:text-white transition-colors duration-500" />
-                  </div>
-                  <div>
-                    <div className="text-[10px] uppercase tracking-widest font-black text-on-surface-variant mb-1">WhatsApp</div>
-                    <div className="text-lg font-bold text-slate-foundation">+94 78 650 6882</div>
-                  </div>
+              <div className="flex items-center gap-6 group">
+                <div className="w-14 h-14 rounded-2xl bg-white flex items-center justify-center shadow-lg group-hover:bg-primary transition-colors duration-500">
+                  <MessageCircle className="w-6 h-6 text-primary group-hover:text-white transition-colors duration-500" />
                 </div>
-                <div className="w-16 h-16 p-1 bg-white rounded-xl shadow-md border border-slate-100 group-hover:scale-110 transition-transform duration-500">
-                  <img src={whatsappQR} alt="WhatsApp QR" className="w-full h-full object-contain" />
+                <div>
+                  <div className="text-[10px] uppercase tracking-widest font-black text-on-surface-variant mb-1">WhatsApp</div>
+                  <div className="text-lg font-bold text-slate-foundation">+94 78 650 6882</div>
                 </div>
               </div>
 
               {/* LinkedIn */}
-              <div className="flex items-center justify-between group max-w-md">
-                <div className="flex items-center gap-6">
-                  <div className="w-14 h-14 rounded-2xl bg-white flex items-center justify-center shadow-lg group-hover:bg-primary transition-colors duration-500">
-                    <Linkedin className="w-6 h-6 text-primary group-hover:text-white transition-colors duration-500" />
-                  </div>
-                  <div>
-                    <div className="text-[10px] uppercase tracking-widest font-black text-on-surface-variant mb-1">LinkedIn</div>
-                    <div className="text-lg font-bold text-slate-foundation">Professional Networking</div>
-                  </div>
+              <div className="flex items-center gap-6 group">
+                <div className="w-14 h-14 rounded-2xl bg-white flex items-center justify-center shadow-lg group-hover:bg-primary transition-colors duration-500">
+                  <Linkedin className="w-6 h-6 text-primary group-hover:text-white transition-colors duration-500" />
                 </div>
-                <div className="w-16 h-16 p-1 bg-white rounded-xl shadow-md border border-slate-100 group-hover:scale-110 transition-transform duration-500">
-                  <img src={linkedinQR} alt="LinkedIn QR" className="w-full h-full object-contain" />
+                <div>
+                  <div className="text-[10px] uppercase tracking-widest font-black text-on-surface-variant mb-1">LinkedIn</div>
+                  <div className="text-lg font-bold text-slate-foundation">Professional Networking</div>
                 </div>
               </div>
             </div>
