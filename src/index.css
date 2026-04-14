@@ -46,7 +46,12 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
   body {
     @apply bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container antialiased;
+    overflow-x: hidden;
   }
 }

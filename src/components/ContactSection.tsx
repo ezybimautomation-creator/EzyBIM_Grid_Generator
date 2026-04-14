@@ -6,31 +6,31 @@ export default function ContactSection() {
   const [state, handleSubmit] = useForm('mqewkqvg');
 
   return (
-    <section className="py-32 px-8 bg-surface-container-low relative overflow-hidden" id="contact">
+    <section className="py-32 px-6 md:px-8 bg-surface-container-low relative overflow-hidden scroll-mt-24" id="contact">
       <div className="absolute inset-0 bim-grid opacity-10"></div>
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-24">
           <div>
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 rounded-full mb-6">
               <span className="w-1.5 h-1.5 rounded-full bg-primary"></span>
               <span className="text-[10px] font-label font-black tracking-widest uppercase text-primary">Get In Touch</span>
             </div>
-            <h2 className="text-4xl md:text-6xl font-headline font-extrabold text-slate-foundation tracking-tighter mb-8">
-              Let's build your <br/><span className="text-primary">custom toolset.</span>
+            <h2 className="text-4xl md:text-6xl font-headline font-extrabold text-slate-foundation tracking-tighter mb-8 max-w-md">
+              Let's build your <br/><span className="text-primary text-glow">custom toolset.</span>
             </h2>
             <p className="text-lg text-on-surface-variant font-light leading-relaxed mb-12 max-w-lg">
               Whether you need a simple script or a full-scale enterprise BIM automation system, our engineers are ready to help.
             </p>
             
-            <div className="space-y-10">
+            <div className="space-y-8 md:space-y-10">
               {/* Email */}
               <div className="flex items-center gap-6 group">
-                <div className="w-14 h-14 rounded-2xl bg-white flex items-center justify-center shadow-lg group-hover:bg-primary transition-colors duration-500">
+                <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-white flex items-center justify-center shadow-lg group-hover:bg-primary transition-colors duration-500">
                   <Mail className="w-6 h-6 text-primary group-hover:text-white transition-colors duration-500" />
                 </div>
-                <div>
+                <div className="min-w-0">
                   <div className="text-[10px] uppercase tracking-widest font-black text-on-surface-variant mb-1">Email Us</div>
-                  <div className="text-lg font-bold text-slate-foundation">ezybimautomation@gmail.com</div>
+                  <div className="text-lg font-bold text-slate-foundation break-all md:break-normal">ezybimautomation@gmail.com</div>
                 </div>
               </div>
               
@@ -41,7 +41,7 @@ export default function ContactSection() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-6 group cursor-pointer"
               >
-                <div className="w-14 h-14 rounded-2xl bg-white flex items-center justify-center shadow-lg group-hover:bg-primary transition-colors duration-500">
+                <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-white flex items-center justify-center shadow-lg group-hover:bg-primary transition-colors duration-500">
                   <MessageCircle className="w-6 h-6 text-primary group-hover:text-white transition-colors duration-500" />
                 </div>
                 <div>
@@ -57,7 +57,7 @@ export default function ContactSection() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-6 group cursor-pointer"
               >
-                <div className="w-14 h-14 rounded-2xl bg-white flex items-center justify-center shadow-lg group-hover:bg-primary transition-colors duration-500">
+                <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-white flex items-center justify-center shadow-lg group-hover:bg-primary transition-colors duration-500">
                   <Linkedin className="w-6 h-6 text-primary group-hover:text-white transition-colors duration-500" />
                 </div>
                 <div>
