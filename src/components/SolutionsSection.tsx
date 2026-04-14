@@ -26,7 +26,7 @@ const solutions = [
 
 export default function SolutionsSection() {
   return (
-    <section className="py-32 px-8 bg-surface border-t border-slate-100">
+    <section className="py-24 md:py-32 px-6 md:px-8 bg-surface border-t border-slate-100">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-24 max-w-2xl mx-auto">
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 rounded-full mb-6">

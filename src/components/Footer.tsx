@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-foundation w-full py-24 px-8 text-white">
+    <footer className="bg-slate-foundation w-full py-24 px-6 md:px-8 text-white">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-16 max-w-7xl mx-auto items-start">
         <div className="md:col-span-1 space-y-8">
           <Link to="/" className="inline-block">

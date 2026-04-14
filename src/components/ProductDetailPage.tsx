@@ -21,7 +21,7 @@ export default function ProductDetailPage() {
   return (
     <div className="bg-surface min-h-screen pb-32">
       {/* Dynamic Hero Section */}
-      <section className="relative pt-32 pb-20 px-8 overflow-hidden">
+      <section className="relative pt-32 pb-20 px-6 md:px-8 overflow-hidden">
         <div className="absolute inset-0 bim-grid opacity-10"></div>
         <div className="absolute top-0 right-0 w-1/3 h-full bg-primary/5 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2"></div>
         
@@ -121,7 +121,7 @@ export default function ProductDetailPage() {
       </section>
 
       {/* Feature Deep Dive */}
-      <section className="py-32 px-8 bg-white border-y border-slate-100">
+      <section className="py-24 md:py-32 px-6 md:px-8 bg-white border-y border-slate-100">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
             {product.fullFeatures.map((feature, idx) => (
@@ -191,7 +191,7 @@ export default function ProductDetailPage() {
 
       {/* Technical Specifications & Expert Tip */}
       {(product.specs || product.tip) && (
-        <section className="py-24 px-8 bg-surface border-t border-slate-100 relative overflow-hidden">
+        <section className="py-24 px-6 md:px-8 bg-surface border-t border-slate-100 relative overflow-hidden">
           <div className="max-w-7xl mx-auto relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
               {/* Specs */}
