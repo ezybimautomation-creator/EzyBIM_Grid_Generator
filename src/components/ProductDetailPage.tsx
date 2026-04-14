@@ -2,10 +2,18 @@ import { useParams, Link } from "react-router-dom";
 import { motion } from "motion/react";
 import { products } from "../constants/products";
 import { ChevronRight, CheckCircle2, Download, ArrowLeft, Play, Layout, Activity } from "lucide-react";
+import { useSEO } from "../hooks/useSEO";
 
 export default function ProductDetailPage() {
   const { id } = useParams();
   const product = products.find((p) => p.id === id);
+
+  // Use a fallback for useSEO in case product is not found,
+  // or use the product details.
+  useSEO({
+    title: product ? `${product.name} — ${product.tagline}` : "Product Not Found — EzyBIM",
+    description: product ? product.description : "This product could not be found."
+  });
 
   if (!product) {
     return (
@@ -287,9 +295,13 @@ export default function ProductDetailPage() {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
                {product.isFree ? (
-                  <button className="w-full sm:w-auto cta-gradient text-white px-12 py-6 rounded-2xl font-headline font-black text-sm uppercase tracking-widest flex items-center justify-center gap-3">
+                  <a 
+                    href={product.downloadUrl}
+                    download
+                    className="w-full sm:w-auto cta-gradient text-white px-12 py-6 rounded-2xl font-headline font-black text-sm uppercase tracking-widest flex items-center justify-center gap-3 shadow-2xl shadow-primary/20"
+                  >
                     Direct Download <Download className="w-5 h-5" />
-                  </button>
+                  </a>
                ) : (
                   <button className="w-full sm:w-auto cta-gradient text-white px-12 py-6 rounded-2xl font-headline font-black text-sm uppercase tracking-widest flex items-center justify-center gap-3">
                     Subscription Plans <ChevronRight className="w-5 h-5" />

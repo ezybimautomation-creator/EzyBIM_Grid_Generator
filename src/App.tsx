@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import { useSEO } from "./hooks/useSEO";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import BentoGrid from "./components/BentoGrid";
@@ -21,6 +22,11 @@ function ScrollToTop() {
 }
 
 function HomePage() {
+  useSEO({
+    title: "EzyBIM — BIM Automation Specialist",
+    description: "Custom-engineered Revit tools to eliminate repetitive tasks and bring surgical accuracy to your architectural modeling workflow."
+  });
+
   return (
     <>
       <Hero />

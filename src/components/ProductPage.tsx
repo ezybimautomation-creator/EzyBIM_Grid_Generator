@@ -1,8 +1,14 @@
 import { motion } from "motion/react";
 import { Cpu, Layers, Database, Globe, ArrowRight } from "lucide-react";
 import ProductSection from "./ProductSection";
+import { useSEO } from "../hooks/useSEO";
 
 export default function ProductPage() {
+  useSEO({
+    title: "Revit Plugins & Solutions — EzyBIM",
+    description: "Explore our complete suite of custom Revit plugins and BIM automation tools designed to bring surgical accuracy to your workflows."
+  });
+
   return (
     <div className="bg-surface min-h-screen pt-24">
       <div className="max-w-7xl mx-auto px-8 relative overflow-hidden mb-24">

@@ -56,7 +56,7 @@ export const products: Product[] = [
     image: gridGenIcon,
     price: "FREE",
     isFree: true,
-    downloadUrl: "#", // Replace with your GitHub Release link
+    downloadUrl: "/EzyGrid_Full_Setup.exe",
     videoUrl: "Dz3v-cmQhx8",
     features: ["Interactive Canvas", "Bulk Generation", "Origin Alignment", "Smart Dimensions"],
     fullFeatures: [
