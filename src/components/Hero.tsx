@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { Link } from "react-router-dom";
 import { Activity, ShieldCheck, Zap } from "lucide-react";
 import heroImg from "../assets/hero.png";
 
@@ -42,9 +43,9 @@ export default function Hero() {
             >
               Request Custom Solution
             </motion.a>
-            <button className="bg-white text-slate-foundation px-10 py-5 rounded-default font-headline font-bold text-lg border border-slate-foundation/10 hover:bg-slate-50 transition-colors">
+            <Link to="/products" className="bg-white text-slate-foundation px-10 py-5 rounded-default font-headline font-bold text-lg border border-slate-foundation/10 hover:bg-slate-50 transition-colors">
               Our Products
-            </button>
+            </Link>
           </div>
         </motion.div>
         
