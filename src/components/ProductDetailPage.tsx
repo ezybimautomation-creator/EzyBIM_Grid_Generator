@@ -88,9 +88,6 @@ export default function ProductDetailPage() {
                     Request a Demo <Play className="w-4 h-4" />
                   </motion.a>
                 )}
-                <button className="bg-white text-slate-foundation border border-slate-200 px-10 py-5 rounded-2xl font-headline font-black text-sm uppercase tracking-widest hover:bg-slate-50 transition-colors">
-                  Documentation
-                </button>
               </div>
             </motion.div>
           </div>
